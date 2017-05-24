@@ -28,10 +28,24 @@ class App extends React.Component {
         <Button
           icon={{ name: 'code' }}
           backgroundColor="pink"
-          title="See it!"
+          title="See it! "
         />
       </Card>
     );
+  }
+
+  renderNoMoreCards() {
+    return(
+      <Card title="All gone!">
+        <Text style={{ marginBottom: 10 }}>
+          There's no More Card content Here '
+        </Text>
+        <Button
+          backgroundColor='silver'
+          title="Get More"
+        />
+      </Card>
+    )
   }
   render() {
     return (
@@ -39,6 +53,7 @@ class App extends React.Component {
         <Deck
           data={DATA}
           renderCard={this.renderCard}
+          renderNoMoreCards={this.renderNoMoreCards}
         />
       </View>
     );
